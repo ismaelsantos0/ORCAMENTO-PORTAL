@@ -1,0 +1,107 @@
+/* ===== Portal look ===== */
+:root {
+  --bg: #0b1220;
+  --card: rgba(255,255,255,0.06);
+  --card2: rgba(255,255,255,0.04);
+  --stroke: rgba(255,255,255,0.10);
+  --text: rgba(255,255,255,0.92);
+  --muted: rgba(255,255,255,0.70);
+  --muted2: rgba(255,255,255,0.55);
+  --accent: #7c5cff;
+  --good: #2dd4bf;
+  --warn: #fbbf24;
+}
+
+html, body, [data-testid="stAppViewContainer"]{
+  background: radial-gradient(1200px 700px at 10% 0%, rgba(124,92,255,0.25), transparent 60%),
+              radial-gradient(900px 600px at 90% 20%, rgba(45,212,191,0.18), transparent 60%),
+              var(--bg);
+  color: var(--text);
+}
+
+.block-container{
+  padding-top: 1.25rem;
+  padding-bottom: 2rem;
+  max-width: 1200px;
+}
+
+[data-testid="stSidebar"]{
+  background: linear-gradient(180deg, rgba(255,255,255,0.05), rgba(255,255,255,0.02));
+  border-right: 1px solid var(--stroke);
+}
+
+[data-testid="stSidebar"] .stRadio > div{
+  gap: 0.35rem;
+}
+
+h1, h2, h3 { letter-spacing: -0.02em; }
+
+.small-muted { color: var(--muted2); font-size: 0.92rem; }
+
+/* Cards */
+.portal-card {
+  background: linear-gradient(180deg, var(--card), var(--card2));
+  border: 1px solid var(--stroke);
+  border-radius: 18px;
+  padding: 16px 16px;
+  box-shadow: 0 14px 40px rgba(0,0,0,0.35);
+}
+
+.portal-card + .portal-card { margin-top: 12px; }
+
+.kpi {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.kpi .label { color: var(--muted2); font-size: 0.9rem; }
+.kpi .value { font-size: 1.6rem; font-weight: 700; }
+.kpi .tag {
+  font-size: 0.85rem;
+  padding: 6px 10px;
+  border-radius: 999px;
+  border: 1px solid var(--stroke);
+  background: rgba(255,255,255,0.05);
+  color: var(--muted);
+}
+
+/* Tables / inputs */
+[data-testid="stDataFrame"], .stTextInput input, .stNumberInput input, .stSelectbox div[data-baseweb="select"]{
+  border-radius: 12px !important;
+}
+
+.stButton > button{
+  border-radius: 14px;
+  border: 1px solid var(--stroke);
+  background: rgba(124,92,255,0.14);
+  color: var(--text);
+  padding: 0.55rem 0.85rem;
+  font-weight: 600;
+}
+
+.stButton > button:hover{
+  background: rgba(124,92,255,0.22);
+  border-color: rgba(124,92,255,0.35);
+}
+
+/* Section divider */
+.hr {
+  height: 1px;
+  background: var(--stroke);
+  margin: 10px 0 18px 0;
+}
+
+/* Pills */
+.pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 10px;
+  border-radius: 999px;
+  border: 1px solid var(--stroke);
+  background: rgba(255,255,255,0.05);
+  color: var(--muted);
+  font-size: 0.85rem;
+}
